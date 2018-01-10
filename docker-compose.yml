@@ -1,0 +1,60 @@
+version: "3.4"
+
+services:
+  web:
+    build:
+      context: ./web-site
+    container_name: m-web
+    deploy:
+      labels:
+        com.fluentweb.intro: "Modern Boilerplate website"
+      replicas: 2
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy: 
+        condition: on-failure
+    image: smebberson/alpine-nginx-nodejs
+    networks: 
+      - fw-elb
+
+    ports:
+      - "3000:80"
+      - "3001:443"
+    restart: always
+    working_dir: /var/www/html
+    volumes:
+      - ./build/public:/var/www/html
+    
+    networks:
+      fw-elb: 
+      
+  web:
+    build:
+      context: ./web-application
+    container_name: fw-web
+    deploy:
+      labels:
+        com.fluentweb.intro: "Fluent Web Boilerplate Application"
+      replicas: 2
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy: 
+        condition: on-failure
+    image: smebberson/alpine-nginx-nodejs
+    networks: 
+      - fw-elb
+
+    ports:
+      - "3000:80"
+      - "3001:443"
+    restart: always
+    working_dir: /var/www/html
+    volumes:
+      - ./build/public:/var/www/html
+    
+networks:
+  fw-elb: 

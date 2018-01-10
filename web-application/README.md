@@ -1,15 +1,40 @@
-# Fluent Web Boilerplate Solution
-This solution is intended for those getting started on Fluent Web who want to fast track setting up a complete modern development and production environment.
 
-This solution leverages ReactJS, Webpack, and Docker.
+# Getting starting with Fluent Web
 
-For greater detail view the [Web Application](/web-site/README.md) or [Website](/web-application/README.md).
+## Understanding project folder configuration
+### 'app'
+This folder is used as the primary working application directory where source code lives. This is the primary application being built.
 
-### Web Application
-The `web-application` contains an advanced website application which inherits Fluent for Web React components and styles.
+### 'build'
+This folder contains webpack configuration. When webpack builds for production scenarios this folder will populate a `/public` directory. The `public` directory will contain all build files.
 
-### Website
-The `web-site` contains simple boilder plate website without Fluent Web.
+### 'root'
+This folder contains production server configuration files in structure compatible with the OS running the application.
+
+## Installing application dependencies
+Change directory inside /web-application and install pre-requisites node packages.
+```
+$ cd ./web-application
+$ npm i
+```
+
+## Working without Docker, in local development environment
+Leverage Webpack capability to build web application and run locally while making web application changes.
+
+Change directory inside /web-application and install pre-requisites.
+```
+$ cd ./web-application
+$ npm i
+```
+
+Build, and startup webpack server as production or development.
+```
+$ npm run serve-pro
+```
+[or] 
+```
+$ npm run serve-dev
+```
 
 ## Working with Docker
 Leverage Docker for running as a staging environment to pre-validate and testing web application is ready for Continous Delivery into production.
@@ -60,7 +85,7 @@ $ docker swarm init
 #### Run as a virtual lab
 This will now run a single service stack, as configured to run 5 container instances of our deployed image on one host.
 ```
-$ docker stack deploy -c docker-compose.yml m-start-lab
+$ docker stack deploy -c docker-compose.yml fw-start-lab
 ```
 
 #### Viewing services
@@ -70,16 +95,16 @@ $ docker service ls
 ```
 
 List the **task** (a single container running in a service)
-The named acronym resolves to Fluent Web enterprise load balancer to relate its purpose with other Docker services.
+The named acronym resolves to fluent web enterprise load balancer to relate its purpose with other Docker services.
 ```
-$ docker service ps m-elb
+$ docker service ps fw-elb
 ```
 
 ## Troubleshooting
 ### Inspecting images
 Use the `tag` or `id` of a running image to inspect. For example, if you want to inspect a running web service named 'fw-web' as shown from the listed images above. Inspection returns all configurations as set on an image. For example, would show you all running environment variables, system settings, network configurations etc.
 ```
-$ docker inspect m-web
+$ docker inspect fw-web
 ```
 
 ### Listing local images
@@ -128,5 +153,5 @@ You can also bundle together.
 $ docker rmi 273374b463b8 96d0f978ee83
 ```
 
-## Ownership
-Contact Fluent Web Questions <fwq@microsoft.com> for details on this repository.
+
+
