@@ -5,10 +5,10 @@ import { render } from 'react-dom';
 // Importing data
 import data from './data/data.json';
 
-// // Importing styles
+// Importing styles
 import './assets/styles/index.scss';
 
-// // Importing images
+// Importing images
 import logo from './assets/images/logos/logo-94x94.png';
 
 let header = (

@@ -3,7 +3,7 @@ version: "3.4"
 services:
   web:
     build:
-      context: ./web-site
+      context: ./lesson-two
     container_name: m-web
     deploy:
       labels:

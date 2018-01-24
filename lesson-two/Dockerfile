@@ -20,14 +20,20 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log && \
     ln -sf /dev/stderr /var/log/nginx/error.log
 
 # Build the npm modules
-ADD package.json home/web-application/package.json
+ADD package.json home/lesson-two/package.json
+RUN cd home/lesson-two && npm install --production
 
-# Could install this way, but, then may require special credentials
-# RUN cd home/lesson-two && npm install --production
-
-# Alternatively, copy the files from local node_modules onto server
-RUN cp -a node_modules /home/web-application/
+# TODO:  need to test this new addition from http://bitjudo.com/blog/2014/03/13/building-efficient-dockerfiles-node-dot-js/ 
+RUN mkdir -p /opt/app && cp -a node_modules /opt/app/
 
 # Add the files (works with .dockerignore to exclude /app/node_modules, so the above npm build isn't replaced)
-ADD . home/web-application
+# From here we load our application's code in, therefore the previous docker
+# "layer" thats been cached will be used if possible
+WORKDIR /opt/app
+ADD . /opt/app
+# ADD . home/lesson-two
 
+EXPOSE 4000
+
+# Start the server
+# CMD ["node", "server.js"]

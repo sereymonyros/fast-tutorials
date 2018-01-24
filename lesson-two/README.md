@@ -1,5 +1,19 @@
 
-# Getting starting in Modern Web development
+# FAST Lesson two
+This lesson covers the following topics:
+1. Install and configure a basic Webpack implementation.
+1. Install and import ReactJS.
+1. Walk through entry point and templating
+1. Walk through importing images
+1. Walk through importing data with JSON
+1. Walk through compiling CSS into header as a file
+1. Walk through bundling JS
+1. Walk through configuring Webpack
+    * Configure for development
+    * Configure for production
+    * Build and deploy for both environments walking through the output
+
+At completion, you will have fully functioning simple Hello World Single Page Application.
 
 ## Understanding project folder configuration
 ### 'app'
@@ -12,18 +26,18 @@ This folder contains webpack configuration. When webpack builds for production s
 This folder contains production server configuration files in structure compatible with the OS running the application.
 
 ## Installing application dependencies
-Change directory inside /web-site and install pre-requisites node packages.
+Change directory inside /lesson-two and install pre-requisites node packages.
 ```
-$ cd ./web-site
+$ cd ./lesson-two
 $ npm i
 ```
 
 ## Working without Docker, in local development environment
 Leverage Webpack capability to build web application and run locally while making web application changes.
 
-Change directory inside /web-site and install pre-requisites.
+Change directory inside /lesson-two and install pre-requisites.
 ```
-$ cd ./web-site
+$ cd ./lesson-two
 $ npm i
 ```
 

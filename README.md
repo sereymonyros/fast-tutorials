@@ -3,13 +3,13 @@ This solution is intended for those getting started on Fluent Web who want to fa
 
 This solution leverages ReactJS, Webpack, and Docker.
 
-For greater detail view the [Web Application](/web-site/README.md) or [Website](/web-application/README.md).
+For greater detail view the [Web Application](/lesson-two/README.md) or [Website](/web-application/README.md).
 
 ### Web Application
 The `web-application` contains an advanced website application which inherits Fluent for Web React components and styles.
 
 ### Website
-The `web-site` contains simple boilder plate website without Fluent Web.
+The `lesson-two` contains simple boilder plate website without Fluent Web.
 
 ## Working with Docker
 Leverage Docker for running as a staging environment to pre-validate and testing web application is ready for Continous Delivery into production.
