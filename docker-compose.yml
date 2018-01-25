@@ -1,13 +1,13 @@
-version: "3.4"
+version: "3.5"
 
 services:
-  web:
+  web-02:
     build:
       context: ./lesson-two
-    container_name: m-web
+    container_name: fw-web-02
     deploy:
       labels:
-        com.fluentweb.intro: "Modern Boilerplate website"
+        com.fluentweb.lesson-two: "Hello world"
       replicas: 2
       resources:
         limits:
@@ -15,28 +15,26 @@ services:
           memory: 50M
       restart_policy: 
         condition: on-failure
-    image: smebberson/alpine-nginx-nodejs
     networks: 
       - fw-elb
-
     ports:
-      - "3000:80"
-      - "3001:443"
+      - "2000:80"
+      - "2001:443"
     restart: always
     working_dir: /var/www/html
     volumes:
-      - ./build/public:/var/www/html
-    
+      - ./lesson-two/build/public:/var/www/html
+      - ./lesson-two/root/etc/nginx/conf.d:/etc/nginx/conf.d
     networks:
       fw-elb: 
       
-  web:
+  web-03:
     build:
-      context: ./web-application
-    container_name: fw-web
+      context: ./lesson-three
+    container_name: fw-web-03
     deploy:
       labels:
-        com.fluentweb.intro: "Fluent Web Boilerplate Application"
+        com.fluentweb.lesson-three: "Fluent Website"
       replicas: 2
       resources:
         limits:
@@ -44,17 +42,15 @@ services:
           memory: 50M
       restart_policy: 
         condition: on-failure
-    image: smebberson/alpine-nginx-nodejs
     networks: 
       - fw-elb
-
     ports:
       - "3000:80"
       - "3001:443"
     restart: always
     working_dir: /var/www/html
     volumes:
-      - ./build/public:/var/www/html
-    
+      - ./lesson-three/build/public:/var/www/html
+      - ./lesson-three/root/etc/nginx/conf.d:/etc/nginx/conf.d
 networks:
   fw-elb: 

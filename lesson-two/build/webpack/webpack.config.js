@@ -13,7 +13,7 @@ const ConfigPluginsPro = require(path.resolve('build/webpack/webpack.pro.config'
 const config = {
     devServer: {
         contentBase: './public',
-        port: 4000
+        port: 1500
     },
     devtool: 'source-map',
     entry: "./app/app.jsx",

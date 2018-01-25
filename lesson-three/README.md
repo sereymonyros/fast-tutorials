@@ -1,5 +1,11 @@
-
-# Getting starting with Fluent Web
+# FAST Lesson three - Working with Fluent Web
+This tuturial explores how to import Fluent components and styles.
+* Import Fluent components private NPM package
+* Import Fluent styles private NPM package
+    * Configure the Sass compiler
+    * Create package script to run the compiler
+    * Hook the compiler into Webpack
+    * Watch the Sass/CSS folder for changes
 
 ## Understanding project folder configuration
 ### 'app'
@@ -9,25 +15,25 @@ This folder is used as the primary working application directory where source co
 This folder contains webpack configuration. When webpack builds for production scenarios this folder will populate a `/public` directory. The `public` directory will contain all build files.
 
 ### 'root'
-This folder contains production server configuration files in structure compatible with the OS running the application.
+This folder contains production server configuration files in structure compatible with the OS running the application and used by Docker.
 
 ## Installing application dependencies
-Change directory inside /web-application and install pre-requisites node packages.
+Change directory inside /lesson-three and install pre-requisites node packages.
 ```
-$ cd ./web-application
+$ cd ./lesson-three
 $ npm i
 ```
 
-## Working without Docker, in local development environment
+## Working in local development environment
 Leverage Webpack capability to build web application and run locally while making web application changes.
 
-Change directory inside /web-application and install pre-requisites.
+Change directory inside /lesson-three and install pre-requisites.
 ```
-$ cd ./web-application
+$ cd ./lesson-three
 $ npm i
 ```
 
-Build, and startup webpack server as production or development.
+Build, and startup webpack server as production or development (http://localhost:1500).
 ```
 $ npm run serve-pro
 ```
@@ -37,12 +43,21 @@ $ npm run serve-dev
 ```
 
 ## Working with Docker
-Leverage Docker for running as a staging environment to pre-validate and testing web application is ready for Continous Delivery into production.
+Leverage Docker for running as a staging environment to pre-validate and test that web application is ready for Continous Delivery into production.
 
 ### Installing and validating pre-requisites
 Validate and view your Compose file.
 ```
 $ docker-compose config
+```
+
+### Pre-Building
+This is only required until there are no private node packages being used and this can then all be scripted in the Dockerfile.
+
+Install all packages and run Webpack for production to generate the production files which can be copied up to the server container.
+```
+$ npm i
+$ npm run serve-pro
 ```
 
 ### Building
@@ -62,7 +77,7 @@ Start up the server in background as `-d`, detached mode.
 $ docker-compose up -d
 ```
 
-*Launch a web browser and visit http://localhost:3000. If successful, you should see an NGINX web page the first time.*
+*Launch a web browser and visit http://localhost:3000* The ports map directly to the lessons when testing Docker. So lesson-three would have port 3000.
 
 ### Stopping
 Stop the container and retain all data settings.
@@ -76,29 +91,6 @@ Stops all containers, removes them, and deletes the images. Add `--volumes` flag
 $ docker-compose down --volumes
 ```
 
-### Run as enterprise with load balancing
-Initialize to startup network running containers.
-```
-$ docker swarm init
-```
-
-#### Run as a virtual lab
-This will now run a single service stack, as configured to run 5 container instances of our deployed image on one host.
-```
-$ docker stack deploy -c docker-compose.yml fw-start-lab
-```
-
-#### Viewing services
-This gets the service ID for one service in our application.
-```
-$ docker service ls
-```
-
-List the **task** (a single container running in a service)
-The named acronym resolves to fluent web enterprise load balancer to relate its purpose with other Docker services.
-```
-$ docker service ps fw-elb
-```
 
 ## Troubleshooting
 ### Inspecting images

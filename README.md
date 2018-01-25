@@ -1,18 +1,23 @@
-# Fluent Web Boilerplate Solution
+# Fluent Web FAST Curriculum
 This solution is intended for those getting started on Fluent Web who want to fast track setting up a complete modern development and production environment.
 
 This solution leverages ReactJS, Webpack, and Docker.
 
-For greater detail view the [Web Application](/lesson-two/README.md) or [Website](/web-application/README.md).
+For greater detail view the [Web Application](/lesson-two/README.md) or [Website](/lesson-three/README.md).
 
-### Web Application
-The `web-application` contains an advanced website application which inherits Fluent for Web React components and styles.
+## Curriculum lessons
+Curriculum lesson's map directly to folder structure. For example, Lesson one, would be located in directory 'lesson-one'. Each lesson is intended to build upon the previous.
 
-### Website
-The `lesson-two` contains simple boilder plate website without Fluent Web.
+### Lesson two
+The `lesson-two` walks through setting up a simple Hello World website running ReactJS, Webpack, Babel.
+
+### Lesson three
+The `lesson-three` walks through building a web application using Microsoft's Fluent Design System by importing Fluent Web React components and styles.
+
 
 ## Working with Docker
-Leverage Docker for running as a staging environment to pre-validate and testing web application is ready for Continous Delivery into production.
+Each lesson includes Docker configuration files. For most people these can be ignored. For those interested in DevOps you can test your applications by running live production scenarios locally. Every lesson is production ready and deployable.
+If you're not familiar with Docker, it brings mobility to any environment simplifying continuous development and delivery into production.
 
 ### Installing and validating pre-requisites
 Validate and view your Compose file.
@@ -36,8 +41,6 @@ Start up the server in background as `-d`, detached mode.
 ```
 $ docker-compose up -d
 ```
-
-*Launch a web browser and visit http://localhost:3000. If successful, you should see an NGINX web page the first time.*
 
 ### Stopping
 Stop the container and retain all data settings.
