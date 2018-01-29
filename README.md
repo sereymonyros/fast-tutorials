@@ -3,16 +3,32 @@ This solution is intended for those getting started on Fluent Web who want to fa
 
 This solution leverages ReactJS, Webpack, and Docker.
 
-For greater detail view the [Web Application](/lesson-two/README.md) or [Website](/lesson-three/README.md).
+For greater detail view the [Web Application](/lesson-02/README.md) or [Website](/lesson-03/README.md).
+
 
 ## Curriculum lessons
-Curriculum lesson's map directly to folder structure. For example, Lesson one, would be located in directory 'lesson-one'. Each lesson is intended to build upon the previous.
+Curriculum lesson's map directly to folder structure. For example, Lesson one, would be located in directory 'lesson-01'. Each lesson is intended to build upon the previous.
 
-### Lesson two
-The `lesson-two` walks through setting up a simple Hello World website running ReactJS, Webpack, Babel.
+### Lesson 01
+Prepares your computer for web development in open source for the absolute beginner.
 
-### Lesson three
-The `lesson-three` walks through building a web application using Microsoft's Fluent Design System by importing Fluent Web React components and styles.
+### Lesson 02
+Example simple hello world website running ReactJS, Webpack, Babel.
+
+### Lesson 03
+Example web application using Microsoft's Fluent Design System by importing Fluent Web React components and styles.
+
+## Lesson folder configurations
+within each lesson is a common folder structure.
+
+### 'app'
+This folder is used as the primary working application directory where source code lives. This is the primary application being built.
+
+### 'build'
+This folder contains webpack configuration. When webpack builds for production scenarios this folder will populate a `/public` directory. The `public` directory will contain all build files.
+
+### 'root'
+This folder contains production server configuration files in structure compatible with the OS running the application and used by Docker.
 
 
 ## Working with Docker

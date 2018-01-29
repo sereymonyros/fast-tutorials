@@ -3,11 +3,11 @@ version: "3.5"
 services:
   web-02:
     build:
-      context: ./lesson-two
+      context: ./lesson-02
     container_name: fw-web-02
     deploy:
       labels:
-        com.fluentweb.lesson-two: "Hello world"
+        com.fluentweb.lesson-02: "Hello world"
       replicas: 2
       resources:
         limits:
@@ -23,18 +23,18 @@ services:
     restart: always
     working_dir: /var/www/html
     volumes:
-      - ./lesson-two/build/public:/var/www/html
-      - ./lesson-two/root/etc/nginx/conf.d:/etc/nginx/conf.d
+      - ./lesson-02/build/public:/var/www/html
+      - ./lesson-02/root/etc/nginx/conf.d:/etc/nginx/conf.d
     networks:
       fw-elb: 
       
   web-03:
     build:
-      context: ./lesson-three
+      context: ./lesson-03
     container_name: fw-web-03
     deploy:
       labels:
-        com.fluentweb.lesson-three: "Fluent Website"
+        com.fluentweb.lesson-03: "Fluent Website"
       replicas: 2
       resources:
         limits:
@@ -50,7 +50,7 @@ services:
     restart: always
     working_dir: /var/www/html
     volumes:
-      - ./lesson-three/build/public:/var/www/html
-      - ./lesson-three/root/etc/nginx/conf.d:/etc/nginx/conf.d
+      - ./lesson-03/build/public:/var/www/html
+      - ./lesson-03/root/etc/nginx/conf.d:/etc/nginx/conf.d
 networks:
   fw-elb: 
