@@ -89,13 +89,15 @@ var actions = [
 // Render app
 
 ReactDOM.render(
-    <Header
-        globalNavigation={ globalNavigation }
-        mobileToggle={ mobileToggle }
-        mobilePrevious={ mobilePrevious }
-        mobileNext={ mobileNext }
-        actions={ actions } 
-    />
+    <div>
+        <Header
+            globalNavigation={ globalNavigation }
+            mobileToggle={ mobileToggle }
+            mobilePrevious={ mobilePrevious }
+            mobileNext={ mobileNext }
+            actions={ actions } 
+        />
+    </div>
     ,
     document.getElementById('root')
 );
