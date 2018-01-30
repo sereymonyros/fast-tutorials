@@ -27,7 +27,6 @@ let config = {
     dest: path.resolve('./build/public/assets/styles'),
     brands: ['orange'],
     minify: false,
-    sources: './app/assets/styles/index.scss',
     filename: (config) => {
         return `fw-${config.region}-${config.theme}-${config.brand}.css`
     }
@@ -50,7 +49,6 @@ switch (process.env.NODE_ENV) {
 
 // Watch the file system to recognize changes in .scss files which
 // will initiate an automatic recompile.
-
 // TODO: Task #3669 : Update Sass comiler to recompile on save, not char change.
 fwStyles.compile(config)
 
