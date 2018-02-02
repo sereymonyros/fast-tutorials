@@ -12,8 +12,8 @@
   },
   "main": "app/index.jsx",
   "scripts": {
-    "serve-pro": "cross-env NODE_ENV=production webpack --config ./build/webpack/webpack.config.js --progress",
-    "serve-dev": "cross-env NODE_ENV=development node_modules/.bin/webpack-dev-server --config ./build/webpack/webpack.config.js --progress",
+    "serve-pro": "npm run sass && cross-env NODE_ENV=production webpack --config ./build/webpack/webpack.config.js --progress",
+    "serve-dev": "npm run sass && cross-env NODE_ENV=development node_modules/.bin/webpack-dev-server --config ./build/webpack/webpack.config.js --progress",
     "sass": "cross-env NODE_ENV=development node ./build/scripts/sass.js --watch"
   },
   "license": "MIT",

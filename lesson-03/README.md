@@ -57,8 +57,6 @@ $ npm run serve-pro
 ```
 $ npm run serve-dev
 ```
-**Caution:**
-Running production `npm run serve-pro` will fail the first time. This is a dependency bug on the Sass Compiler. Re-run it and it will succeed on the second time and publish the expected files under `/build/public/`.
 
 ## Working with Docker
 Leverage Docker for running as a staging environment to pre-validate and test that web application is ready for Continous Delivery into production.
