@@ -20,9 +20,9 @@ Configure feed authentication so the application can call into private dependenc
     ```
     $ vi ~/.npmrc
     ```
-4. Add registry information into the .npmrc. This step can be skipped if the source repository already includes an .npmrc file with the registry information. If you run into problems, try to remove the `always-auth=true` to follow.
+4. Add registry information into the .npmrc. This step can be skipped if the source repository already includes an .npmrc file with the registry information. If you run into problems, try to remove the `always-auth=true` to follow. The package registry is a private feed and should always be [scoped](https://docs.npmjs.com/misc/scope), our packages scope is `@ms-fw`.
     ```
-    registry=registry=https://fluentweb.pkgs.visualstudio.com/_packaging/ms.fw/npm/registry/
+    @ms-fw:registry=https://fluentweb.pkgs.visualstudio.com/_packaging/ms.fw/npm/registry/
     always-auth=true
     ```
 5.  Add credentials to your user .npmrc file manually by clicking on the "Generate npm credentials" link and copying the contents revealed in the text area. It will look similar to this example:
