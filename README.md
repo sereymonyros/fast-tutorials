@@ -1,5 +1,5 @@
-# Fluent Web FAST Curriculum
-This solution is intended for those getting started on Fluent Web who want to fast track setting up a complete modern development and production environment.
+# FAST Tutorials Curriculum
+A solution for setting up a complete development and production environment for the FAST Design Architecture (used by Fluent Web.)
 
 This solution leverages ReactJS, Webpack, and Docker.
 
