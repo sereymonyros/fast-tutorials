@@ -1,0 +1,129 @@
+{
+    "hyperLink": {
+        "class": "c-skip-to-main",
+        "text": "Skip to main content",
+        "href": "#mainContent"
+    },
+    "header": {
+        "navigation": {
+            "items": [
+                {
+                    "text": "Windows",
+                    "href": "#"
+                },
+                {
+                    "text": "Surface",
+                    "href": "#"
+                },
+                {
+                    "text": "Office",
+                    "href": "#"
+                },
+                {
+                    "text": "Xbox",
+                    "href": "#"
+                },
+                {
+                    "text": "Azure",
+                    "href": "#"
+                }
+            ]
+        },
+        "mobileToggle": {
+            "glyph": "global-nav-button",
+            "glyphOnly": true,
+            "text": "Menu"
+        },
+        "mobilePrevious": {
+            "glyph": "chevron-left",
+            "glyphOnly": true,
+            "text": "Previous"
+        },
+        "mobileNext": {
+            "glyph": "chevron-right",
+            "glyphOnly": true,
+            "text": "Next"
+        },
+        "actions": [
+            {
+                "glyph": "waffle",
+                "glyphOnly": true,
+                "text": "Menu"
+            },
+            {
+                "glyph": "search",
+                "glyphOnly": true,
+                "text": "Search"
+            },
+            {
+                "glyph": "shop-brand",
+                "glyphOnly": true,
+                "href": "#",
+                "text": "Bag"
+            }
+        ]
+    },
+    "typographicIntro": {
+        "backgroundColor": "neutral-80",
+        "heading": {
+            "tag": "h1",
+            "text": "Page layouts"
+        },
+        "subheading": {
+            "tag": "p",
+            "text": "This lesson demonstrates a few core page layout examples as demonstrated with Page, Grid, and Column components."
+        }
+    },
+    "contentPlacement": {
+        "image": {
+            "vp6": "https://via.placeholder.com/1600x600",
+            "vp5": "https://via.placeholder.com/1600x600",
+            "vp4": "https://via.placeholder.com/1259x472",
+            "vp3": "https://via.placeholder.com/1803x609",
+            "vp2": "https://via.placeholder.com/767x431",
+            "vp1": "https://via.placeholder.com/593x303",
+            "alt": "A placeholder.com image with solidy gray background and dimension of height vs width overlay"
+        },
+        "heading": {
+            "tag": "h3",
+            "level": -1,
+            "text": "Surface Book"
+        },
+        "paragraph": {
+            "text": "Whether you love to edit photos, sketch, make music, or create amazing videos, Surface Book packs the power you need for when inspiration strikes."
+        },
+        "callToActions": {
+            "href": "#",
+            "text": "See more Surface Book"
+        },
+        "badge": {
+            "size": "small",
+            "type": "default",
+            "text": "new"
+        }
+    },
+    "footer": {
+        "baseLinks": [
+            {
+                "text": "Contact us",
+                "href": "#"
+            },
+            {
+                "text": "Privacy & cookies",
+                "href": "#"
+            },
+            {
+                "text": "Terms of use",
+                "href": "#"
+            },
+            {
+                "text": "Trademarks",
+                "href": "#"
+            },
+            {
+                "text": "Legal",
+                "href": "#"
+            }
+        ]
+    }
+}

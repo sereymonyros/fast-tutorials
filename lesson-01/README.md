@@ -1,6 +1,4 @@
-# FAST Curriculum for learning with Fluent Web
-
-## Lesson 01
+# Lesson 01 - Learning the basics
 Getting your environment up and running with the basic global applications and configurations required for web development.
 
 ### Install and configure Git

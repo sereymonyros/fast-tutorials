@@ -1,34 +1,18 @@
-# Lesson 03 - Working with Fluent for Web
-This tutorial explores how to import Fluent for Web components and styles (packages are private for Microsoft employees only, though becoming open source soon).
+# FAST Lesson 04 - Building Fluent Web pages
+This tutorial explores how to build a Fluent Web page using [Page, Grid, and Column](https://fluentweb.com/prototyping/getting-started/grid-layout) columns.
 
-* Import Fluent for Web components private NPM package
-* Import Fluent for Web styles private NPM package
-    * Configure the Sass compiler
-    * Create package script to run the compiler
-    * Hook the compiler into Webpack
-    * Watch the Sass/CSS folder for changes
+* Constructing the page layout
+* * Working with a *Grid*
+* * Working with *Columns*
+* * Adding a single [Content Placement](https://fluentweb.com/components/content-placement)
 
 ## Install Pre-requisites to access private packages
-For Microsoft employees only. Will become open source soon for everyone to access.
+* Lesson 03, where Fluent Web packages for components and styles were imported onto a page. This is required if you haven't yet setup your `.npmrc` file for private access to VSTS.
 
-### Install and configure NPM
-Configure feed authentication so the application can call into private dependencies.
-
-1. Click on [Connect to feed](https://fluentweb.visualstudio.com/Fluent%20Web/_packaging?feed=ms.fw&_a=feed) to launch into a dialog containing more detailed instructions.
-2. Select `npm` on the left navigation.
-3. Create or edit the .npmrc file using Git Bash in the home folder
-    ```
-    $ vi ~/.npmrc
-    ```
-4. Add registry information into the .npmrc. This step can be skipped if the source repository already includes an .npmrc file with the registry information. If you run into problems, try to remove the `always-auth=true` to follow. The package registry is a private feed and should always be [scoped](https://docs.npmjs.com/misc/scope), our packages scope is `@ms-fw`.
-    ```
-    @ms-fw:registry=https://fluentweb.pkgs.visualstudio.com/_packaging/ms.fw/npm/registry/
-    always-auth=true
-    ```
-5.  Add credentials to your user `.npmrc` file manually by clicking on the "Generate npm credentials" link and copying the contents revealed in the text area directly into the file.
+*For Microsoft employees only. Will become open source soon for everyone to access.*
 
 ## Installing application dependencies
-Ensure you're inside the /lesson-03 directory and install pre-requisites node packages.
+Ensure you're inside the /lesson-04 directory and install pre-requisites node packages.
 ```
 $ npm i
 ```
@@ -40,8 +24,6 @@ Build, and startup webpack server as development (http://localhost:1500).
 ```
 $ npm run serve-dev
 ```
-**Caution:**
-Running production `npm run serve-pro` will fail the first time. This is a dependency bug on the Sass Compiler. Re-run it and it will succeed on the second time and publish the expected files under `/build/public/`.
 
 Build and compile for production. This will generate files into `./build/public` that can then be deployed into production.
 ```

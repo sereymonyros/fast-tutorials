@@ -1,20 +1,5 @@
-#### Commit/Merge messages
-Accepted format: "`type(category): description [issue number]`"
->`docs(readme): add an accessibility section to the readme [123456, 654321]`
+Please fill in this template.
 
-`type` - Select one of the following:
-- `a11y`
-- `chore`
-- `docs`
-- `feat`
-- `fix`
-- `other`
-- `refactor`
-- `style`
-- `test`
-
-`category` - This should be an area or feature name. For example, button or readme.
-
-`description` - A single line, lowercase, and should describe what feature or fix the user gets from this PR.
-
-`issue number` - Maps directly to the GitHub issue number. Can be more than one if the work is related.
+- [ ] The merge message is in the [correct format](https://fluentweb.com/prototyping/contribution-policy#pull-requests)
+- [ ] A comment has been added which links your pull request to an [open issue](https://help.github.com/articles/closing-issues-using-keywords/)
+- [ ] Have you bumped the `package.json` version?

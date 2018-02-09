@@ -1,11 +1,11 @@
 {
-  "name": "@microsoft/fast-tutorials-lesson-03",
-  "description": "Ramp up quickly with the FAST learning experience applied to real-world production quality examples.",
+  "name": "@microsoft/fast-tutorials-lesson-04",
+  "description": "Understanding how to build a fluent web page.",
   "author": {
     "name": "Fluent Web",
     "email": "fwq@microsoft.com"
   },
-  "version": "1.0.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/Microsoft/fast-tutorials.git"
